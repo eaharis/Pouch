@@ -16,7 +16,8 @@ export function extractReadable(): {
   if (!node) {
     // heuristic: largest text block
     let best: { el: Element; score: number } | null = null;
-    const walker = doc.createTreeWalker(doc.body || doc, NodeFilter.SHOW_ELEMENT);
+    const SHOW_ELEMENT = 1; // NodeFilter.SHOW_ELEMENT
+    const walker = doc.createTreeWalker(doc.body || (doc as any), SHOW_ELEMENT);
     while (walker.nextNode()) {
       const el = walker.currentNode as Element;
       const tag = el.tagName.toLowerCase();

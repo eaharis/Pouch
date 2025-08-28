@@ -1,4 +1,4 @@
-import Dexie, { Table } from "dexie";
+import Dexie, { type Table } from "dexie";
 import type { Item, Content } from "./types";
 
 class RLDB extends Dexie {
