@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Offline Read Later",
+  "version": "0.1.0",
+  "description": "Local-first read-it-later. Save, read offline, delete.",
+  "action": { "default_title": "Archive", "default_popup": "popup.html" },
+  "permissions": ["activeTab", "scripting", "storage", "tabs", "unlimitedStorage", "notifications"],
+  "background": { "scripts": ["background/index.js"] },
+  "icons": { "48": "icons/icon48.png", "96": "icons/icon96.png" }
+}
